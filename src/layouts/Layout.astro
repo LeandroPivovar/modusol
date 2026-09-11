@@ -1,0 +1,60 @@
+---
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/500.css';
+import '@fontsource/barlow/600.css';
+import '@fontsource/barlow/700.css';
+import '@fontsource/barlow-condensed/600.css';
+import '@fontsource/barlow-condensed/700.css';
+import '../styles/global.css';
+import barlow400 from '@fontsource/barlow/files/barlow-latin-400-normal.woff2?url';
+import condensed700 from '@fontsource/barlow-condensed/files/barlow-condensed-latin-700-normal.woff2?url';
+import { contato, empresa, seo } from '../data/site';
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: empresa.nome,
+  description: seo.descricao,
+  url: canonical.href,
+  telephone: contato.whatsappE164,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: empresa.cidade,
+    addressRegion: empresa.uf,
+    addressCountry: 'BR',
+  },
+  sameAs: [contato.instagramUrl],
+};
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seo.titulo}</title>
+    <meta name="description" content={seo.descricao} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#f5f7f8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content={empresa.nome} />
+    <meta property="og:title" content={seo.titulo} />
+    <meta property="og:description" content={seo.descricao} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preload" href={barlow400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={condensed700} as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <slot />
+  </body>
+</html>

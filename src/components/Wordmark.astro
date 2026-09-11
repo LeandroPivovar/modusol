@@ -24,11 +24,11 @@ const { tone = 'light' } = Astro.props;
   .wordmark__name {
     position: relative;
     font-family: var(--font-display);
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 0.01em;
-    color: var(--orange);
-    padding-left: 0.95rem;
+    letter-spacing: -0.065em;
+    color: var(--navy);
+    padding-left: 1rem;
   }
 
   /* pequeno “sol” amarelo, referência ao símbolo do logo */
@@ -40,19 +40,23 @@ const { tone = 'light' } = Astro.props;
     width: 0.55rem;
     height: 0.55rem;
     border-radius: 50%;
-    background: var(--yellow);
+    background: var(--orange);
   }
 
   .wordmark__sub {
     margin-top: 0.15rem;
     padding-left: 0.95rem;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    color: var(--green);
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+  }
+
+  .wordmark--dark .wordmark__name {
+    color: var(--white);
   }
 
   .wordmark--dark .wordmark__sub {
-    color: #8fd18a;
+    color: var(--on-navy-soft);
   }
 </style>

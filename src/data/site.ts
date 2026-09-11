@@ -44,22 +44,22 @@ export const navegacao = [
 ];
 
 export const cta = {
-  principal: 'Solicitar orçamento pelo WhatsApp',
+  principal: 'Conversar pelo WhatsApp',
   curto: 'Orçamento pelo WhatsApp',
   final: 'Falar com a Modusol',
 };
 
 export const hero = {
-  titulo: 'Seu imóvel pode gerar a própria energia.',
+  titulo: 'O sol é de todos. A energia pode ser sua.',
   texto:
-    'Conheça as possibilidades da energia solar para o seu consumo. Fale com a Modusol Energia Solar, em Redenção, PA, e solicite uma avaliação para o seu imóvel.',
+    'Transforme a luz que chega ao seu imóvel em energia para o seu dia a dia. Converse com a Modusol e descubra as possibilidades para o seu consumo.',
   // Sem galeria de projetos reais, o CTA secundário leva ao passo a passo.
   // Quando houver fotos reais de instalações, troque por “Ver instalações”.
   ctaSecundario: { href: '#como-comecar', label: 'Como começar' },
 };
 
 export const beneficios = {
-  titulo: 'Energia gerada no próprio imóvel',
+  titulo: 'Uma nova relação com a sua energia.',
   intro:
     'Painéis solares transformam a luz do sol em eletricidade usada ali mesmo, na sua casa ou no seu negócio. Parte da energia que você hoje compra da distribuidora passa a ser produzida no local.',
   itens: [
@@ -144,7 +144,7 @@ export const fotos: Record<'hero' | 'residencial' | 'metalica' | 'solo', Foto> =
 };
 
 export const aplicacoes = {
-  titulo: 'Onde os painéis podem ficar',
+  titulo: 'Cada espaço, uma possibilidade.',
   texto:
     'Os módulos podem ser instalados em telhados, coberturas metálicas ou estruturas no solo. A escolha depende do espaço, da estrutura e da incidência de sol no imóvel.',
   aviso: 'Imagens ilustrativas de sistemas solares. Não são projetos da Modusol.',
@@ -152,7 +152,7 @@ export const aplicacoes = {
 };
 
 export const passos = {
-  titulo: 'Como começar',
+  titulo: 'Tudo começa com uma conversa.',
   intro: 'O primeiro contato é uma conversa pelo WhatsApp, em três passos simples.',
   itens: [
     {
@@ -218,6 +218,6 @@ export const faq = {
 };
 
 export const contatoFinal = {
-  titulo: 'Vamos conversar sobre a energia solar no seu imóvel?',
+  titulo: 'Seu próximo passo é uma conversa.',
   texto: 'Mande uma mensagem pelo WhatsApp contando sua cidade e o tipo de imóvel.',
 };
